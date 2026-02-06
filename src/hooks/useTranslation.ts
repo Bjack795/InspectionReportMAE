@@ -251,16 +251,16 @@ const translations: Translations = {
     en: 'Generate Document'
   },
   'esporta_cache': {
-    it: 'Esporta Cache',
-    en: 'Export Cache'
+    it: 'Esporta pacchetto bozze',
+    en: 'Export draft package'
   },
   'bozze_salvate': {
     it: 'Bozze Salvate',
     en: 'Saved Drafts'
   },
   'importa_cache': {
-    it: 'Importa Cache',
-    en: 'Import Cache'
+    it: 'Importa pacchetto bozze',
+    en: 'Import draft package'
   },
   'scarica_bozza': {
     it: 'Scarica Bozza',

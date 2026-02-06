@@ -26,7 +26,7 @@ export default defineConfig({
         description: 'Verbale di Ispezione Redesco Progetti',
         theme_color: '#ffffff',
         display: 'standalone',
-        start_url: isDesktop ? './' : '/VerbaleIspezione/',
+        start_url: isDesktop ? './' : '/InspectionReportMAE/',
         icons: [
           {
             src: 'pwa-192x192.png',
@@ -42,7 +42,7 @@ export default defineConfig({
       },
       workbox: {
         maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB invece del default 2 MB
-        navigateFallback: isDesktop ? '/index.html' : '/VerbaleIspezione/index.html',
+        navigateFallback: isDesktop ? '/index.html' : '/InspectionReportMAE/index.html',
         globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,gif,txt}'],
         runtimeCaching: [
           {
@@ -57,7 +57,7 @@ export default defineConfig({
     })
   ],
   // Base path: relativo per desktop, assoluto per GitHub Pages
-  base: isDesktop ? './' : '/VerbaleIspezione/',
+  base: isDesktop ? './' : '/InspectionReportMAE/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')

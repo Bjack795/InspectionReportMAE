@@ -106,6 +106,7 @@ const generateFileName = () => {
             const arrayBuffer = await pdfBlob.arrayBuffer();
             await fs.writeFile(filePath as string, new Uint8Array(arrayBuffer));
             console.log('✅ PDF salvato con successo in:', filePath);
+            alert('PDF scaricato con successo!');
           } else {
             console.log('❌ Utente ha annullato il salvataggio');
           }
@@ -150,6 +151,7 @@ const generateFileName = () => {
             await writableStream.close();
             
             console.log('✅ PDF salvato con successo tramite File System API');
+            alert('PDF scaricato con successo!');
           } catch (fileSystemError: any) {
             if (fileSystemError.name === 'AbortError') {
               console.log('❌ Utente ha annullato il salvataggio');
@@ -166,6 +168,7 @@ const generateFileName = () => {
               document.body.removeChild(link);
               URL.revokeObjectURL(url);
               console.log('✅ Download automatico completato (fallback)');
+              alert('PDF scaricato con successo!');
             }
           }
         } else {
@@ -180,6 +183,7 @@ const generateFileName = () => {
           document.body.removeChild(link);
           URL.revokeObjectURL(url);
           console.log('✅ Download automatico completato');
+          alert('PDF scaricato con successo!');
         }
       }
       

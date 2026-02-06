@@ -26,7 +26,7 @@ const HeaderSelector: React.FC<HeaderSelectorProps> = ({
       </span>
       <br/>
       <div className="flex border rounded-lg overflow-hidden" style={{ borderColor: colors.outline_variant }}>
-        {/* Pulsante Redesco */}
+        {/* Pulsante Redesco
         <button
           onClick={() => onHeaderChange('redesco')}
           className={`header-selector-btn flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors duration-200 ${
@@ -43,7 +43,7 @@ const HeaderSelector: React.FC<HeaderSelectorProps> = ({
           <span>Redesco</span>
         </button>
 
-        &nbsp;
+        &nbsp; */}
 
         {/* Pulsante Maestrale */}
         <button

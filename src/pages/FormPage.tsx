@@ -70,6 +70,7 @@ const FormPage: React.FC = () => {
     schedaControllo: '-',
     oggettoSopralluogo: '-',
     ispettore:'Nome Cognome',
+    perConto: 'Nome Cognome',
     testoOsservazione:'Tale osservazione è da considerarsi prescrittiva – da ottemperare',
     images: [],
     tipoIspezione: {
@@ -575,7 +576,8 @@ const FormPage: React.FC = () => {
       'schedaControllo',
       'oggettoSopralluogo',
       'ispettore',
-      'testoOsservazione'
+      'testoOsservazione',
+      'perConto'
     ]
 
     requiredFields.forEach(field => {
@@ -1026,6 +1028,15 @@ const generateJsonFileName = () => {
               value={formData.ispettore}
               onChange={handleInputChange}
               error={errors.ispettore}
+              colors={colors}
+              styling={styling}
+            />
+            <FormInput
+              label={t('per_conto_di')}
+              name="perConto"
+              value={formData.perConto}
+              onChange={handleInputChange}
+              error={errors.perConto}
               colors={colors}
               styling={styling}
             />

@@ -22,7 +22,7 @@ const headerConfigs: Record<HeaderType, HeaderConfig> = {
 }
 
 export const useHeaderSelection = () => {
-  const [headerType, setHeaderType] = useState<HeaderType>('redesco')
+  const [headerType, setHeaderType] = useState<HeaderType>('maestrale')
 
   const changeHeader = useCallback((newHeaderType: HeaderType) => {
     setHeaderType(newHeaderType)

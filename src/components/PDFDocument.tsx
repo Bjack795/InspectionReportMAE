@@ -51,7 +51,7 @@ const getTranslation = (key: string, language: Language): string => {
     'ispettore': { it: 'Ispettore', en: 'Inspector' },
     'per_conto_di': { it: 'Per conto di', en: 'On behalf of' },
     'firma': { it: 'Firma', en: 'Signature' },
-    'footer_pdf': { it: 'Redesco Progetti srl - Scheda di Verifica | Pagina', en: 'Redesco Progetti srl - Inspection Report | Page' },
+    'footer_pdf': { it: 'Maestrale srl - Scheda di Verifica | Pagina', en: 'Maestrale srl - Inspection Report | Page' },
     'di': { it: 'di', en: 'of' },
     'figura': { it: 'Figura', en: 'Figure' }
   }
@@ -407,7 +407,7 @@ const createPagedContent = (data: FormInputs, compressedImages: Record<string, s
            </View>
            <View style={[styles.sectionColumnCentered, styles.verticalDivider]}>
              <View style={styles.verticalDividerLine}></View>
-             <Text style={styles.value}>Mauro Eugenio Giuliani</Text>
+             <Text style={styles.value}>{data.perConto}</Text>
            </View>
            <View style={[styles.sectionColumnCentered, styles.verticalDivider]}>
              {/* <View style={styles.verticalDividerLine}></View> */}
@@ -728,7 +728,7 @@ interface PDFDocumentProps {
   headerType?: HeaderType;
 }
 
-const PDFDocument: React.FC<PDFDocumentProps> = ({ data, compressedImages, language = 'it', headerType = 'redesco' }) => {
+const PDFDocument: React.FC<PDFDocumentProps> = ({ data, compressedImages, language = 'it', headerType = 'maestrale' }) => {
   // Configurazione header basata sul tipo selezionato
   const logoPath = headerType === 'maestrale' ? 'logo_mae.png' : 'logo.png'
   const companyName = headerType === 'maestrale' ? 'Maestrale Srl' : ' '

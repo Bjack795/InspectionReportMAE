@@ -21,7 +21,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
   children = 'Scarica PDF',
   onDownload,
   language = 'it',
-  headerType = 'redesco',
+  headerType = 'maestrale',
   t
 }) => {
   const { generatePDFWithFooter, isLoading, error } = usePDFWithFooter();

@@ -17,6 +17,7 @@ export interface FormInputs {
   verificaMateriale: string;
   riferimentoProgetto: string;
   ubicazione: string;
+  perConto: string;
   schedaControllo: string;
   oggettoSopralluogo: string;
   ispettore: string;
